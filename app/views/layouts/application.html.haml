@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title
+      DomainInfo
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+
+  %body
+    #container
+      #header
+        #header_content
+          = link_to root_path, :id => 'site_logo' do
+            %span
+              Domain informer
+          %ul#account_box
+            %li
+              = link_to "Domain Info", domains_path
+      #main
+        #page_content
+          = yield
+
+      #footer
+        #footer_content
+          %ul#nav_bottom
+            %li
+              = link_to "About", "#"
+              %p
+                Comming soon
+          %p.copyright
+            copyright @2011
+          %ul.site_links
+            %li
+              = link_to "Domain Info", root_path

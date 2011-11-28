@@ -1,0 +1,9 @@
+%div
+  %form{:action => domains_results_path, :method => :post}
+    #domains_content
+      #div
+        = text_area_tag :domains, nil, :class => 'url-wide', :rows => 15, :placeholder => "Enter list of urls here"
+    #buttons
+      %input{:type => 'submit', :class => "button green tall", :id => "submit", :value => "Get info"}
+    #preloader{:style => 'display: none;'}
+      = image_tag "preloader.gif", :alt => "loading..."
